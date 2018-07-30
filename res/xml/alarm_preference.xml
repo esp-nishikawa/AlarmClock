@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?> 
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/alarm_edit_title">
+
+        <EditTextPreference android:key="alarm_name"
+            android:title="@string/alarm_name_title"
+            android:dialogTitle="@string/alarm_name_title"
+            android:maxLength="128" />
+
+        <com.esp.android.alarmclock.TimePickerPreference
+            android:key="alarm_time"
+            android:title="@string/alarm_time_title"
+            android:dialogTitle="@string/alarm_time_title"
+            is24Hour="true" />
+
+        <ListPreference android:key="repeat"
+            android:title="@string/repeat_title"
+            android:dialogTitle="@string/repeat_title"
+            android:entries="@array/repeat_list"
+            android:entryValues="@array/repeat_list_values" />
+
+        <ListPreference android:key="music_type"
+            android:title="@string/alarm_music_title"
+            android:dialogTitle="@string/alarm_music_title"
+            android:entries="@array/music_type_list"
+            android:entryValues="@array/music_type_list_values" />
+
+        <com.esp.android.alarmclock.NumberPreference
+            android:key="music_volume"
+            android:title="@string/music_volume_title"
+            android:dialogTitle="@string/music_volume_title"
+            minValue="0"
+            maxValue="100" />
+
+        <com.esp.android.alarmclock.NumberPreference
+            android:key="music_length"
+            android:title="@string/music_length_title"
+            android:dialogTitle="@string/music_length_title"
+            minValue="1"
+            maxValue="900" />
+
+        <CheckBoxPreference android:key="voice"
+            android:title="@string/voice_title" />
+
+        <CheckBoxPreference android:key="vibrator"
+            android:title="@string/vibrator_title" />
+
+        <ListPreference android:key="snooze_mode"
+            android:title="@string/snooze_mode_title"
+            android:dialogTitle="@string/snooze_mode_title"
+            android:entries="@array/snooze_mode_list"
+            android:entryValues="@array/snooze_mode_list_values" />
+
+        <com.esp.android.alarmclock.NumberPreference
+            android:key="snooze_length"
+            android:title="@string/snooze_length_title"
+            android:dialogTitle="@string/snooze_length_title"
+            minValue="1"
+            maxValue="30" />
+
+        <com.esp.android.alarmclock.NumberPreference
+            android:key="snooze_times"
+            android:title="@string/snooze_times_title"
+            android:dialogTitle="@string/snooze_times_title"
+            minValue="1"
+            maxValue="10" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
+

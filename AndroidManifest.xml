@@ -1,0 +1,59 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.esp.android.alarmclock"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk android:minSdkVersion="11" android:targetSdkVersion="15" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application android:name="com.esp.android.alarmclock.AlarmClockApp"
+        android:label="@string/app_name"
+        android:icon="@drawable/ic_launcher"
+        android:theme="@style/AppTheme">
+
+        <receiver android:name=".AlarmClockWidget"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.esp.android.alarmclock.ACTION_CLOCK_CLICK" />
+                <action android:name="com.esp.android.alarmclock.ACTION_START_ALARM" />
+                <action android:name="com.esp.android.alarmclock.ACTION_STOP_ALARM" />
+                <action android:name="com.esp.android.alarmclock.ACTION_RESET" />
+                <action android:name="com.esp.android.alarmclock.ACTION_ERROR" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_SCANNER_FINISHED" />
+                <data android:scheme="file" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/appwidget" />
+        </receiver> 
+        <service android:name=".MusicPlayerService" >
+            <intent-filter>
+                <action android:name="com.esp.android.alarmclock.ACTION_MUSIC_PLAY" />
+                <action android:name="com.esp.android.alarmclock.ACTION_MUSIC_PAUSE" />
+                <action android:name="com.esp.android.alarmclock.ACTION_MUSIC_STOP" />
+            </intent-filter>
+        </service>
+        <service android:name=".TextToSpeechService" >
+            <intent-filter>
+                <action android:name="com.esp.android.alarmclock.ACTION_VOICE_PLAY" />
+                <action android:name="com.esp.android.alarmclock.ACTION_VOICE_STOP" />
+            </intent-filter>
+        </service>
+        <activity android:name=".AlarmListActivity" android:launchMode="singleTask" />
+        <activity android:name=".AlarmEditActivity" android:launchMode="standard" />
+        <activity android:name=".ArtistListActivity" android:launchMode="standard" />
+        <activity android:name=".MusicListActivity" android:launchMode="standard" />
+        <activity android:name=".BookmarkListActivity" android:launchMode="standard" />
+        <activity android:name=".WeekListActivity" android:launchMode="standard" />
+        <activity android:name=".AlarmStopActivity" android:launchMode="singleInstance" />
+        <activity android:name=".SnoozeReleaseActivity" android:launchMode="singleInstance" />
+        <activity android:name=".ErrorListActivity" android:launchMode="standard" />
+    </application>
+
+</manifest>

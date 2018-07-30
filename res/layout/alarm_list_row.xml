@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?> 
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="match_parent" 
+    android:layout_height="match_parent" 
+    android:orientation="horizontal" >  
+
+    <ToggleButton
+        android:id="@+id/alarm_onoff_button"
+        android:layout_width="80dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="8dip"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textOn="@string/on_label"
+        android:textOff="@string/off_label" />
+
+    <Button
+        android:id="@+id/alarm_edit_button"
+        android:layout_width="80dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="8dip"
+        android:textSize="14sp"
+        android:text="@string/edit_label" />
+
+    <TextView
+        android:id="@+id/alarm_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/alarm_onoff_button"
+        android:layout_toLeftOf="@id/alarm_edit_button"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="4dip"
+        android:textStyle="normal"
+        android:typeface="sans"
+        android:textSize="22sp"
+        android:textColor="#ff0066ff"
+        android:lines="1"
+        android:ellipsize="end"
+        android:scrollHorizontally="true" />
+
+    <TextView
+        android:id="@+id/repeat_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/alarm_onoff_button"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="4dip"
+        android:textStyle="normal"
+        android:typeface="sans"
+        android:textSize="16dip" />
+
+    <TextView
+        android:id="@+id/alarm_time_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/alarm_edit_button"
+        android:layout_alignParentBottom="true"
+        android:paddingRight="4dip"
+        android:textStyle="normal"
+        android:typeface="monospace"
+        android:textSize="14dip" />
+
+</RelativeLayout>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="repeat_list">
+        <item>Daily</item>
+        <item>Specify Day</item>
+        <item>Weekday（Mon to Sat）</item>
+        <item>Day Off（Sun）</item>
+        <item>Once Only</item>
+    </string-array>
+
+    <string-array name="repeat_list_values">
+        <item>Daily</item>
+        <item>SpecifyDay</item>
+        <item>Weekday</item>
+        <item>DayOff</item>
+        <item>OnceOnly</item>
+    </string-array>
+
+    <string-array name="music_type_list">
+        <item>Alarm Tone</item>
+        <item>Music</item>
+        <item>Bookmark</item>
+    </string-array>
+
+    <string-array name="music_type_list_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="week_list">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
+
+    <string-array name="week_list_values">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
+
+    <string-array name="snooze_mode_list">
+        <item>OFF</item>
+        <item>ON</item>
+        <item>ON（Volume UP）</item>
+    </string-array>
+
+    <string-array name="snooze_mode_list_values">
+        <item>SnoozeOff</item>
+        <item>SnoozeOn</item>
+        <item>VolumeUp</item>
+    </string-array>
+
+    <string-array name="musiclist_menu_list">
+        <item>Play</item>
+        <item>Add to Bookmark</item>
+        <item>Show path</item>
+    </string-array>
+
+    <string-array name="bookmarklist_menu_list">
+        <item>Play</item>
+        <item>Remove from Bookmark</item>
+        <item>Show path</item>
+    </string-array>
+
+</resources>
